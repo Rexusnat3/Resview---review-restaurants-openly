@@ -127,8 +127,8 @@ class CategorizedRestaurantReviewer(RestaurantReviewer):
 if __name__ == "__main__":
     categorized_reviewer = CategorizedRestaurantReviewer()
 
-    categorized_reviewer.add_review("Pizza Palace", "Alice", 5, "Great pizza and friendly staff!", "Italian")
-    categorized_reviewer.add_review("Sushi World", "Bob", 4, "Fresh and delicious sushi!", "Japanese")
+    categorized_reviewer.add_review("Pizza Palace", "Alice", 5, "Great pizza place", "Italian")
+    categorized_reviewer.add_review("Sushi World", "Bob", 4, "fresh sushi and delicious", "Japanese")
 
     print("Reviews for Italian cuisine:", categorized_reviewer.get_reviews_by_cuisine("Italian"))
     print("Reviews for Japanese cuisine:", categorized_reviewer.get_reviews_by_cuisine("Japanese"))
