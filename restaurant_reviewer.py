@@ -2,13 +2,14 @@ import json
 
 
 class RestaurantReviewer:
+
     def __init__(self):
+        """ initialize a list to store the restaurant reviews"""
         self.reviews = []
 
     def add_review(self, restaurant_name, reviewer_name, rating, comment):
-        """
-
-        """
+        """Method created to add reviews to restaurants, ensures rating is between 1 and 5.
+          It also appends the review to the reviews list"""
         if not (1 <= rating <= 5):
             raise ValueError("Rating must be between 1 and 5.")
 
@@ -39,9 +40,7 @@ class RestaurantReviewer:
         return total_rating / len(restaurant_reviews)
 
     def save_reviews_to_file(self, file_name):
-        """
-
-        """
+        """Method to save all the reviews to a json file """
         with open(file_name, 'w') as file:
             json.dump(self.reviews, file, indent=4)
         print(f"Reviews saved to {file_name}.")
